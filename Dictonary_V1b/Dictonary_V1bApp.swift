@@ -10,8 +10,7 @@ import SwiftUI
 @main
 struct Dictonary_V1bApp: App {
     var body: some Scene {
-        WindowGroup {
-            IntroView()
+        WindowGroup { HomeView().environmentObject(ContentModel())
         }
     }
 }

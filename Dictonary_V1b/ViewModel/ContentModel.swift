@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class ViewModel: ObservableObject {
+class ContentModel: ObservableObject {
     
     @Published var books = [Book]()
     

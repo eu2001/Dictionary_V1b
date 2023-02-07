@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct IntroView: View {
-    @ObservedObject var model = ViewModel()
+struct HomeView: View {
+    @EnvironmentObject var model:ContentModel
     
     var body: some View {
         
@@ -23,8 +23,8 @@ struct IntroView: View {
     }
 
 
-struct IntroView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        IntroView()
+        HomeView()
     }
 }
