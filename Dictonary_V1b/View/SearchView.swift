@@ -9,9 +9,33 @@ import SwiftUI
 
 struct SearchView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        VStack(alignment: .center, spacing:0){
+                    Text("Search") .font(.title).bold()
+               Spacer()
+                   VStack(alignment: .center, spacing:25){
+                   Button("Search by Word"){}.foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
+                           .padding(.all,20).font(.title2)
+                           .foregroundColor(.white)
+                           .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
+                           .cornerRadius(10)
+                   Button("Search by Category"){}.foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
+                           .padding(.all,20).font(.title2)
+                           .foregroundColor(.white)
+                           .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
+                           .cornerRadius(10)
+                       Button("Search by Page"){}.foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
+                           .padding(.all,20).font(.title2)
+                               .foregroundColor(.white)
+                               .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
+                               .cornerRadius(10)
+                       
+                   }
+               Spacer()
+               }
+               .padding(.all)
+              
+           }
+       }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {

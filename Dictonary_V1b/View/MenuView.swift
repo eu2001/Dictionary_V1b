@@ -18,7 +18,7 @@ struct MenuView: View {
                         Image(systemName: "star")
                         Text("Favorites")
                     }}.tag(1)
-                 LanguagesView().tabItem{VStack{Image(systemName: "character.book.closed.fill")
+                 LanguageView().tabItem{VStack{Image(systemName: "character.book.closed.fill")
                         Text("Languages")
                     }}.tag(2)
                     FlashcardView().tabItem{VStack{Image(systemName: "rectangle.fill.on.rectangle.fill")
