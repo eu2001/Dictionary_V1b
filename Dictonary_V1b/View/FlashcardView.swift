@@ -24,6 +24,7 @@ struct FlashcardView: View {
                 Text("Select the Language to Practice:")
                     .font(.title2)
                     .multilineTextAlignment(.leading)
+                    .padding(.vertical, 30.0)
             Picker("Cards", selection: $pickerIndex)
          {   Text("Spanish").tag("ESP")
                 Text("French").tag("FRE")
@@ -32,13 +33,15 @@ struct FlashcardView: View {
              Text("Italian").tag("ITA")
              Text("Hebrew").tag("HEB")
              Text("ASL").tag("ASL")
-         }.pickerStyle(WheelPickerStyle())
+         }.padding(.bottom, 5.0).pickerStyle(WheelPickerStyle()).frame(width: 300, height: 80, alignment: .center
+         ).clipped()
         }
                 Spacer()
                 VStack(alignment: .leading, spacing:0){
                     Text("Select the Subject to Practice:")
                         .font(.title2)
                         .multilineTextAlignment(.leading)
+                        .padding(.vertical, 30.0)
                 Picker("Cards", selection: $pickerIndexChap
                 )
              {   Text("General Vocabulary").tag("GEN")
@@ -47,7 +50,8 @@ struct FlashcardView: View {
                   Text("Meal Service").tag("MEA")
                  Text("Beverage Service").tag("BEV")
                  Text("Announcements").tag("ANN")
-             }.pickerStyle(WheelPickerStyle())
+             }.padding(.bottom, 5.0).pickerStyle(WheelPickerStyle()).frame(width: 300, height: 80, alignment: .center
+             ).clipped()
             }
                 Spacer()
                 
@@ -55,11 +59,12 @@ struct FlashcardView: View {
                     Text("Start").foregroundColor(.white)
                         .fontWeight(.bold)
                         .frame(minWidth: 0, maxWidth: 200)
-                        .padding(.all,20)
+                        .padding(.all,20.0)
                         .foregroundColor(.blue)
                         .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
                         .cornerRadius(10)
                 }
+                .padding([.top, .leading, .trailing], 20.0)
                 NavigationLink("", destination:  FlashCardsGameView(), isActive: $showFlashIntroView)
                 
                
