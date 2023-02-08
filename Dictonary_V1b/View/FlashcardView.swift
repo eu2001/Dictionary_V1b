@@ -12,7 +12,7 @@ struct FlashcardView: View {
     //   var book: Book
     //@ObservedObject var card
     
-    @State var pickerIndex = "ESP"
+    @State var pickerIndex = "FRE"
     @State var pickerIndexChap = "AIR"
     @State private var showFlashIntroView = false
     var body: some View {
@@ -64,7 +64,7 @@ struct FlashcardView: View {
                         .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
                         .cornerRadius(10)
                 }
-                .padding([.top, .leading, .trailing], 20.0)
+                .padding(.top, 35.0)
                 NavigationLink("", destination:  FlashCardsGameView(), isActive: $showFlashIntroView)
                 
                

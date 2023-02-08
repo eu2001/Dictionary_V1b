@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct FlashCardsGameView: View {
-    @State   var redval = 0.2
+    @EnvironmentObject var model: ContentModel
+        @State   var redval = 0.2
         @State   var blueval = 0.6
         @State var greenval = 0.2
         var cardColor: Color {
@@ -20,9 +21,9 @@ struct FlashCardsGameView: View {
                     opacity: 0.8
                 )
             }
-        @State var texto = "Jogo de Cartas"
+    @State var texto = "Good Morning"
         var body: some View {
-            VStack{
+                VStack{
                 Text("Flashcards")
                     .font(.title)
                     .fontWeight(.bold)
@@ -41,13 +42,15 @@ struct FlashCardsGameView: View {
                 }
                 TabView {
                     
-                    ForEach (0..<40) { index in
+                    ForEach (model.books){
+                        r in
                         
                         ZStack{
                             VStack{
-                            Rectangle().background(.white).foregroundColor(cardColor).frame(minWidth: 0,  maxWidth: 300, minHeight: 0, maxHeight: 200,  alignment: .center).cornerRadius(25).shadow(color: .gray, radius: 7, x: 7, y: 7).onTapGesture { texto = "Cards Game"}
+                                Rectangle().background(.white).foregroundColor(cardColor).frame(minWidth: 0,  maxWidth: 300, minHeight: 0, maxHeight: 200,  alignment: .center).cornerRadius(25).shadow(color: .gray, radius: 7, x: 7, y: 7).onTapGesture { texto = r.nameGer}
                             }
-                            VStack{ Text(texto)
+                            VStack{
+                                Text(texto)
                                 .font(.title2)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.white)
@@ -68,7 +71,7 @@ struct FlashCardsGameView: View {
                    
                     Spacer()
                     Button {} label: {
-                        Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)
+                        Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 60, maxWidth: 60, minHeight: 30, idealHeight: 60, maxHeight: 60, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)
                     }
                     
                     
@@ -87,6 +90,6 @@ struct FlashCardsGameView: View {
 
 struct FlashCardsGameView_Previews: PreviewProvider {
     static var previews: some View {
-        FlashCardsGameView()
+        FlashCardsGameView().environmentObject(ContentModel())
     }
 }
