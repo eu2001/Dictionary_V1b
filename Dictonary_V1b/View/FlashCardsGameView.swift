@@ -9,15 +9,13 @@ import SwiftUI
 
 struct FlashCardsGameView: View {
     @EnvironmentObject var model: ContentModel
-        @State   var redval = 0.2
-        @State   var blueval = 0.6
-        @State var greenval = 0.2
+        
         var cardColor: Color {
                 return Color(
                     .sRGB,
-                    red: redval,
-                    green: greenval,
-                    blue: blueval,
+                    red: 0.2,
+                    green: 0.2,
+                    blue: 0.7,
                     opacity: 0.8
                 )
             }

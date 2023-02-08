@@ -16,6 +16,7 @@ struct FavoriteView: View {
                 ForEach (model.books){
                     r in
                     ZStack {
+                       
                         Rectangle().background(.white).foregroundColor(.white).cornerRadius(15).shadow(color: .gray, radius: 5, x: 5, y: 5).aspectRatio(CGSize(width:335, height: 230),contentMode: .fit)
                         VStack(alignment: .leading){ HStack {
                             Button(action: {}) {
@@ -55,6 +56,8 @@ struct FavoriteView: View {
                             
                     }
                     .padding(.horizontal, 40.0).padding(.vertical,5)
+                    
+                    
                 }
             }
         }
