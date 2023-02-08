@@ -59,7 +59,16 @@ struct FlashCardsGameView: View {
                 HStack{
                     Spacer()
                     Button {} label: {
-                        Image(systemName: "play.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)
+                        VStack(spacing:0){ Image(systemName: "star").foregroundColor(.yellow)
+                            Text("Favorites")
+                                .font(.caption2)
+                            .foregroundColor(Color.black)}.frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center)
+                    }
+                    
+                   
+                    Spacer()
+                    Button {} label: {
+                        Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)
                     }
                     
                     
@@ -67,14 +76,7 @@ struct FlashCardsGameView: View {
                     Button {} label: {
                         Image(systemName: "tortoise.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
                     Spacer()
-                    Button {} label: {
-                        VStack(spacing:0){ Image(systemName: "star").foregroundColor(.yellow)
-                            Text("Favorites")
-                                .font(.caption2)
-                            .foregroundColor(Color.black)}.frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center)
-                    }
                     
-                    Spacer()
                 }
                 Spacer()
                 
