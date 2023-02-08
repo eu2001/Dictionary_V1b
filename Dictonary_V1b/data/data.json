@@ -19,7 +19,9 @@
     "audioGer":"www.cnn.com",
     "nameFre":"Bonjour",
     "translitFre":"bong-joor",
-    "audioFre":"www.uol.com.br"
+    "audioFre":"www.uol.com.br",
+    "nameheb":"שלום",
+    "audioheb":"www.uol.com"
     
 },
     {
@@ -42,7 +44,9 @@
     "audioGer":"www.cnn.com",
     "nameFre":"Avion",
     "translitFre":"ah-vee-on",
-    "audioFre":"www.uol.com.br"
+    "audioFre":"www.uol.com.br",
+    "nameheb":"מטוס",
+    "audioheb":"www.uol.com"
     
 },
     {
@@ -65,7 +69,9 @@
     "audioGer":"www.cnn.com",
     "nameFre":"Aeroport",
     "translitFre":"ah-vee-on",
-    "audioFre":"www.uol.com.br"
+    "audioFre":"www.uol.com.br",
+    "nameheb":"שדה תעופה",
+    "audioheb":"www.uol.com"
     
 }
 ]

@@ -29,6 +29,8 @@ struct Book : Decodable, Identifiable {
             var nameFre: String
             var translitFre: String
             var audioFre: String
+    var nameheb: String
+    var audioheb: String
    
     
 }
